@@ -1,0 +1,29 @@
+# KuaiSearch Three-Tier Interaction-Density Benchmark Configuration
+dataset:
+  repo_id: "benchen4395/KuaiSearch"
+  core5:
+    tier: "core5"
+    core_item_k: 5
+    core_user_k: 1
+    use_rank_prehistory: false
+    max_hist_queries: 15
+    max_hist_items: 20
+    val_ratio: 0.05
+    seed: 42
+  mini:
+    tier: "mini"
+    target_corpus_size: 100000
+    max_users: 16000
+    use_rank_prehistory: false
+    max_hist_queries: 15
+    max_hist_items: 20
+    val_ratio: 0.05
+    seed: 42
+  scale:
+    tier: "scale"
+    target_corpus_size: 500000
+    use_rank_prehistory: false
+    max_hist_queries: 15
+    max_hist_items: 20
+    val_ratio: 0.05
+    seed: 42

@@ -1,0 +1,24 @@
+# Unified Generative Search Foundation: 3-Stage Alignment + OneSearch-V2 Joint SDFT
+sft:
+  base_model: "Qwen/Qwen3-1.7B-Base"
+  scaling_models:
+    - "Qwen/Qwen3-0.6B-Base"
+    - "Qwen/Qwen3-1.7B-Base"
+    - "Qwen/Qwen3-4B-Base"
+    - "Qwen/Qwen3-8B-Base"
+  use_progressive_stages: true
+  use_joint_sdft: true
+  personalized: true
+  user_id_mode: "mu_seq"
+  use_query_sid: false
+  sdft_kl_weight: 0.15
+  rdrop_weight: 0.05
+  focal_gamma: 1.0
+  sdft_temperature: 1.0
+  stage3_replay_ratio: 0.30
+  stage12_epochs: 2
+  stage3_epochs: 3
+  batch_size_per_gpu: 32
+  lr: 1.5e-4
+  eval_beams: 20
+  seed: 42

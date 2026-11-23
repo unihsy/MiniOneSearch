@@ -1,0 +1,19 @@
+# Search-Oriented Semantic ID Tokenizer Zoo Configuration (OneSearch-V1 §3.1)
+tokenizer:
+  method: "khqe_rq_opq_dedup"
+  codebook_sizes_by_tier:
+    core5: [512, 256, 256, 256, 256]
+    mini: [512, 256, 256, 256, 256]
+    scale: [512, 512, 256, 256, 256]
+  aligned_encoder_5loss_weights:
+    q2i: 1.00
+    q2q: 0.35
+    i2i: 0.35
+    rank_margin: 0.50
+    human_relevance_4tier: 0.50
+  l3_only_balanced: true
+  opq_backend: "procrustes_opq"
+  rq_kmeans_iters: 30
+  rqvae_epochs: 45
+  deduplicate_items: true
+  seed: 42

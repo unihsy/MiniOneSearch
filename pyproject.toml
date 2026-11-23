@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minionesearch"
+version = "0.1.0"
+description = "MiniOneSearch: An Open-Source End-to-End Framework for Scaling Personalized Generative Search"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+    {name = "MiniOneSearch Contributors"}
+]
+keywords = [
+    "generative-search",
+    "semantic-id",
+    "information-retrieval",
+    "large-language-models",
+    "reinforcement-learning",
+    "grpo",
+    "constrained-decoding",
+]
+
+[project.urls]
+Repository = "https://github.com/unihsy/MiniOneSearch"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.66.0",
+    "jieba>=0.42.1",
+    "scikit-learn>=1.3.0",
+    "orjson>=3.9.0",
+    "torch>=2.3.0",
+    "transformers>=4.51.0",
+    "accelerate>=0.34.0",
+    "safetensors>=0.4.3",
+    "huggingface_hub>=0.25.0",
+]
+
+[project.optional-dependencies]
+train = [
+    "torch>=2.3.0",
+    "transformers>=4.51.0",
+    "accelerate>=0.34.0",
+    "safetensors>=0.4.3",
+    "huggingface_hub>=0.25.0",
+    "orjson>=3.9.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["minionesearch*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

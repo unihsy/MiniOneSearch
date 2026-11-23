@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 436" width="100%" font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arr-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.8 L 8.2 5 L 0 8.2 z" fill="#4A5568"/>
+    </marker>
+    <marker id="arr-steel" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.8 L 8.2 5 L 0 8.2 z" fill="#3B6998"/>
+    </marker>
+    <marker id="arr-ochre" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.8 L 8.2 5 L 0 8.2 z" fill="#D1822B"/>
+    </marker>
+    <marker id="arr-sage" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.8 L 8.2 5 L 0 8.2 z" fill="#4A8B71"/>
+    </marker>
+    <marker id="arr-brick" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.8 L 8.2 5 L 0 8.2 z" fill="#C44E52"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1240" height="436" fill="#FFFFFF"/>
+
+  <!-- ====================================================================== -->
+  <!-- PANEL (a): Cascade vs. End-to-End Generative Paradigm                  -->
+  <!-- ====================================================================== -->
+  <rect x="14" y="14" width="268" height="378" rx="6" fill="#FAFBFD" stroke="#C8D0DA" stroke-width="1.1" stroke-dasharray="5,3"/>
+
+  <!-- User + History + Query Input Icons -->
+  <g transform="translate(26, 28)">
+    <!-- User silhouette icon -->
+    <circle cx="17" cy="13" r="7" fill="none" stroke="#3B6998" stroke-width="1.6"/>
+    <path d="M 5 30 C 5 21.5, 29 21.5, 29 30" fill="none" stroke="#3B6998" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Search query bar with magnifier icon (x=38..174) + Causal clock pill (x=179..236) = exact 236px right edge -->
+    <rect x="38" y="3" width="136" height="24" rx="12" fill="#FFFFFF" stroke="#8FA3B8" stroke-width="1.1"/>
+    <circle cx="51" cy="14" r="4.3" fill="none" stroke="#4A5568" stroke-width="1.35"/>
+    <line x1="54.3" y1="17.3" x2="57.8" y2="20.8" stroke="#4A5568" stroke-width="1.35" stroke-linecap="round"/>
+    <text x="64" y="18.5" font-size="9.6" fill="#222A35">Query <tspan font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="10.4" fill="#3B6998">q</tspan> <tspan font-size="8.4" fill="#718096">(cur)</tspan></text>
+
+    <!-- Causal clock badge aligned flush to x=236 -->
+    <rect x="179" y="3" width="57" height="24" rx="12" fill="#F5F9F7" stroke="#9CCAB8" stroke-width="1"/>
+    <circle cx="192" cy="15" r="6.5" fill="#FFFFFF" stroke="#4A8B71" stroke-width="1.25"/>
+    <polyline points="192,11 192,15 195.2,16.8" fill="none" stroke="#4A8B71" stroke-width="1.25" stroke-linecap="round"/>
+    <text x="203" y="18.5" font-size="9.2" font-family="Georgia, serif" font-style="italic" fill="#356954">&lt; t</text>
+
+    <!-- History item thumbnails strip (x=38..236) -->
+    <rect x="38" y="34" width="198" height="22" rx="4" fill="#FFFFFF" stroke="#D5DCE4"/>
+    <rect x="44" y="38" width="14" height="14" rx="2.5" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.9"/>
+    <rect x="62" y="38" width="14" height="14" rx="2.5" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.9"/>
+    <rect x="80" y="38" width="14" height="14" rx="2.5" fill="#E2F0E9" stroke="#4A8B71" stroke-width="0.9"/>
+    <text x="102" y="48.5" font-size="9.2" fill="#4A5568">Causal History <tspan font-family="Georgia, serif" font-style="italic" font-size="9.8" fill="#222A35">H</tspan><tspan dy="2.5" font-family="Georgia, serif" font-style="italic" font-size="7.2" fill="#222A35">u</tspan></text>
+  </g>
+
+  <!-- Upper Sub-box: Traditional Cascade (MCA) -->
+  <g transform="translate(26, 102)">
+    <rect x="0" y="0" width="244" height="122" rx="5" fill="#FDF8F8" stroke="#E2B4B6" stroke-width="1"/>
+    <text x="10" y="17" font-size="9.8" font-weight="700" fill="#9E3B3E">Traditional Cascade (MCA)</text>
+    <text x="192" y="17" font-size="8.8" fill="#9E3B3E">40.7 ms</text>
+
+    <!-- Funnel Icon -->
+    <polygon points="14,30 56,30 44,52 44,72 26,72 26,52" fill="#E6ECF2" stroke="#5A6B7C" stroke-width="1.1"/>
+    <text x="35" y="44" text-anchor="middle" font-size="8.2" font-weight="700" fill="#222A35">MIPS</text>
+    <text x="35" y="86" text-anchor="middle" font-size="8.4" fill="#4A5568">Pers. Recall</text>
+
+    <line x1="60" y1="51" x2="86" y2="51" stroke="#4A5568" stroke-width="1.2" marker-end="url(#arr-ink)"/>
+    <text x="73" y="45" text-anchor="middle" font-size="8" fill="#718096">100</text>
+
+    <!-- Cross-Encoder Rerank Stack -->
+    <rect x="90" y="31" width="60" height="40" rx="4" fill="#F9E5E6" stroke="#C44E52" stroke-width="1.1"/>
+    <line x1="98" y1="43" x2="142" y2="43" stroke="#C44E52" stroke-width="1"/>
+    <line x1="98" y1="51" x2="142" y2="51" stroke="#C44E52" stroke-width="1"/>
+    <line x1="98" y1="59" x2="130" y2="59" stroke="#C44E52" stroke-width="1"/>
+    <text x="120" y="86" text-anchor="middle" font-size="8.4" fill="#9E3B3E">Non-Pers CE</text>
+
+    <!-- Clash X Icon -->
+    <line x1="154" y1="51" x2="174" y2="51" stroke="#C44E52" stroke-width="1.2" marker-end="url(#arr-brick)"/>
+    <circle cx="204" cy="51" r="17" fill="#F9E5E6" stroke="#C44E52" stroke-width="1.2"/>
+    <path d="M 197 44 L 211 58 M 211 44 L 197 58" stroke="#C44E52" stroke-width="2" stroke-linecap="round"/>
+    <text x="204" y="86" text-anchor="middle" font-size="8.4" font-weight="700" fill="#C44E52">−19% Ambig</text>
+
+    <text x="122" y="110" text-anchor="middle" font-size="8.6" fill="#7F3A3D">Objective Collision: erases user taste</text>
+  </g>
+
+  <!-- Lower Sub-box: MiniOneSearch Unified Paradigm -->
+  <g transform="translate(26, 236)">
+    <rect x="0" y="0" width="244" height="140" rx="5" fill="#F4F8FB" stroke="#9BB8D3" stroke-width="1.1"/>
+    <text x="10" y="18" font-size="9.8" font-weight="700" fill="#2B547E">MiniOneSearch (Unified)</text>
+    <text x="184" y="18" font-size="9" font-family="Georgia, serif" font-style="italic" fill="#2B547E">O(L = 5)</text>
+
+    <!-- Transformer Decoder Stack Icon -->
+    <g transform="translate(16, 33)">
+      <rect x="0" y="0" width="58" height="14" rx="3" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.1"/>
+      <rect x="0" y="18" width="58" height="14" rx="3" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.1"/>
+      <rect x="0" y="36" width="58" height="14" rx="3" fill="#3B6998"/>
+      <text x="29" y="46" text-anchor="middle" font-size="8.2" font-weight="700" fill="#FFFFFF">Qwen3</text>
+      <text x="29" y="65" text-anchor="middle" font-size="8.4" fill="#222A35">SDFT + RL</text>
+    </g>
+
+    <line x1="78" y1="58" x2="104" y2="58" stroke="#3B6998" stroke-width="1.3" marker-end="url(#arr-steel)"/>
+
+    <!-- Mini Prefix-Trie Icon -->
+    <g transform="translate(108, 31)">
+      <circle cx="28" cy="8" r="4.5" fill="#3B6998"/>
+      <line x1="28" y1="12.5" x2="12" y2="28" stroke="#3B6998" stroke-width="1.2"/>
+      <line x1="28" y1="12.5" x2="44" y2="28" stroke="#3B6998" stroke-width="1.2"/>
+      <circle cx="12" cy="28" r="4" fill="#4A8B71"/>
+      <circle cx="44" cy="28" r="4" fill="#DCE7F2" stroke="#3B6998" stroke-width="1"/>
+      <line x1="12" y1="32" x2="5" y2="47" stroke="#4A8B71" stroke-width="1.2"/>
+      <line x1="12" y1="32" x2="21" y2="47" stroke="#4A8B71" stroke-width="1.2"/>
+      <circle cx="5" cy="47" r="3.5" fill="#4A8B71"/>
+      <circle cx="21" cy="47" r="3.5" fill="#4A8B71"/>
+      <text x="26" y="67" text-anchor="middle" font-size="8.4" fill="#222A35">CSR Trie</text>
+    </g>
+
+    <line x1="162" y1="58" x2="184" y2="58" stroke="#4A8B71" stroke-width="1.3" marker-end="url(#arr-sage)"/>
+
+    <!-- Ranked List + Checkmark Icon -->
+    <g transform="translate(188, 33)">
+      <rect x="0" y="0" width="44" height="50" rx="4" fill="#FFFFFF" stroke="#4A8B71" stroke-width="1.2"/>
+      <rect x="6" y="8" width="20" height="5" rx="1.5" fill="#4A8B71"/>
+      <rect x="6" y="18" width="26" height="5" rx="1.5" fill="#8EB2D5"/>
+      <rect x="6" y="28" width="22" height="5" rx="1.5" fill="#8EB2D5"/>
+      <polyline points="28,37 32.5,42 39.5,33" fill="none" stroke="#4A8B71" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="22" y="65" text-anchor="middle" font-size="8.4" font-weight="700" fill="#4A8B71">100% Valid</text>
+    </g>
+
+    <text x="122" y="124" text-anchor="middle" font-size="8.6" fill="#2B547E">Jointly aligns taste &amp; relevance in 1 stage</text>
+  </g>
+
+  <text x="148" y="416" text-anchor="middle" font-size="10.8" font-weight="700" fill="#222A35">(a) Cascade vs. Generative Paradigm</text>
+
+  <line x1="282" y1="203" x2="298" y2="203" stroke="#4A5568" stroke-width="1.4" marker-end="url(#arr-ink)"/>
+
+  <!-- ====================================================================== -->
+  <!-- PANEL (b): KHQE-RQ-OPQ Search Semantic ID Tokenizer                    -->
+  <!-- ====================================================================== -->
+  <rect x="302" y="14" width="292" height="378" rx="6" fill="#FAFBFD" stroke="#C8D0DA" stroke-width="1.1" stroke-dasharray="5,3"/>
+
+  <g transform="translate(315, 30)">
+    <!-- Product Tag Icon -->
+    <rect x="0" y="0" width="76" height="44" rx="5" fill="#FFFFFF" stroke="#8FA3B8" stroke-width="1.1"/>
+    <path d="M 9 11 L 19 11 L 25 17 L 17 25 L 9 17 Z" fill="#FCEAD2" stroke="#D1822B" stroke-width="1.1"/>
+    <circle cx="14" cy="15" r="1.3" fill="#D1822B"/>
+    <text x="31" y="18" font-size="9.2" font-weight="700" fill="#222A35">Item </text>
+    <text x="55" y="18" font-size="10" font-family="Georgia, serif" font-style="italic" fill="#3B6998">i</text>
+    <text x="9" y="36" font-size="8" fill="#718096">Title · Brand · Cat</text>
+
+    <!-- Query + Relevance Supervision Icon -->
+    <rect x="0" y="54" width="80" height="38" rx="5" fill="#FFFFFF" stroke="#8FA3B8" stroke-width="1.1"/>
+    <circle cx="12.5" cy="71" r="4.3" fill="none" stroke="#3B6998" stroke-width="1.3"/>
+    <line x1="15.7" y1="74.2" x2="19.5" y2="78" stroke="#3B6998" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="25" y="70" font-size="8.5" font-weight="700" fill="#222A35">Train Q–I</text>
+    <text x="25" y="83" font-size="7.7" fill="#718096">Click + 4-Tier</text>
+
+    <line x1="76" y1="22" x2="100" y2="38" stroke="#3B6998" stroke-width="1.2" marker-end="url(#arr-steel)"/>
+    <line x1="80" y1="72" x2="100" y2="56" stroke="#3B6998" stroke-width="1.2" marker-end="url(#arr-steel)"/>
+
+    <!-- 5-Loss Aligned Encoder Trapezoid -->
+    <polygon points="104,16 168,28 168,68 104,80" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.3"/>
+    <text x="136" y="45" text-anchor="middle" font-size="8.8" font-weight="700" fill="#222A35">Aligned</text>
+    <text x="136" y="59" text-anchor="middle" font-size="9.8" font-family="Georgia, serif" font-style="italic" fill="#2B547E">L<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.8">5-loss</tspan></text>
+
+    <!-- Eq.(2) Core Attribute Fusion (strictly orthogonal vertical arrow at x=202) -->
+    <line x1="168" y1="48" x2="190" y2="48" stroke="#3B6998" stroke-width="1.2" marker-end="url(#arr-steel)"/>
+    <circle cx="202" cy="48" r="9.5" fill="#FCEAD2" stroke="#D1822B" stroke-width="1.2"/>
+    <text x="202" y="52" text-anchor="middle" font-size="11.5" font-weight="700" fill="#D1822B">+</text>
+    <rect x="171" y="0" width="62" height="21" rx="4" fill="#FFFDF9" stroke="#D1822B" stroke-width="1"/>
+    <text x="202" y="14" text-anchor="middle" font-size="8.1" font-weight="700" fill="#9C5D16">Core Attr</text>
+    <line x1="202" y1="21" x2="202" y2="36" stroke="#D1822B" stroke-width="1.15" marker-end="url(#arr-ochre)"/>
+
+    <!-- Output KHQE Vector -->
+    <line x1="211.5" y1="48" x2="222" y2="48" stroke="#3B6998" stroke-width="1.15"/>
+    <rect x="223" y="26" width="14" height="44" rx="3" fill="#3B6998"/>
+    <line x1="225" y1="35" x2="235" y2="35" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="225" y1="44" x2="235" y2="44" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="225" y1="53" x2="235" y2="53" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="225" y1="61" x2="235" y2="61" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="243" y="51" font-size="10" font-family="Georgia, serif" font-style="italic" fill="#222A35">z<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="7.1" fill="#4A5568">item</tspan></text>
+  </g>
+
+  <line x1="448" y1="126" x2="448" y2="146" stroke="#3B6998" stroke-width="1.3" marker-end="url(#arr-steel)"/>
+
+  <!-- 5-Layer Funnel Codebook Grids -->
+  <g transform="translate(320, 150)">
+    <rect x="0" y="0" width="256" height="150" rx="5" fill="#FFFFFF" stroke="#CFD8E3"/>
+    <text x="12" y="18" font-size="9.3" font-weight="700" fill="#222A35">Hierarchical Funnel RQ + Procrustes OPQ</text>
+
+    <rect x="14" y="28" width="136" height="16" rx="2.5" fill="#DCE7F2" stroke="#3B6998" stroke-width="1"/>
+    <line x1="41" y1="28" x2="41" y2="44" stroke="#3B6998" stroke-width="0.7"/>
+    <line x1="68" y1="28" x2="68" y2="44" stroke="#3B6998" stroke-width="0.7"/>
+    <line x1="95" y1="28" x2="95" y2="44" stroke="#3B6998" stroke-width="0.7"/>
+    <line x1="122" y1="28" x2="122" y2="44" stroke="#3B6998" stroke-width="0.7"/>
+    <text x="158" y="39.5" font-size="8.4" fill="#2B547E">L1 (512) Natural</text>
+
+    <rect x="24" y="50" width="116" height="16" rx="2.5" fill="#DCE7F2" stroke="#3B6998" stroke-width="1"/>
+    <line x1="53" y1="50" x2="53" y2="66" stroke="#3B6998" stroke-width="0.7"/>
+    <line x1="82" y1="50" x2="82" y2="66" stroke="#3B6998" stroke-width="0.7"/>
+    <line x1="111" y1="50" x2="111" y2="66" stroke="#3B6998" stroke-width="0.7"/>
+    <text x="158" y="61.5" font-size="8.4" fill="#2B547E">L2 (256) Natural</text>
+
+    <rect x="24" y="72" width="116" height="16" rx="2.5" fill="#E2F0E9" stroke="#4A8B71" stroke-width="1"/>
+    <line x1="53" y1="72" x2="53" y2="88" stroke="#4A8B71" stroke-width="0.7"/>
+    <line x1="82" y1="72" x2="82" y2="88" stroke="#4A8B71" stroke-width="0.7"/>
+    <line x1="111" y1="72" x2="111" y2="88" stroke="#4A8B71" stroke-width="0.7"/>
+    <text x="158" y="83.5" font-size="8.4" fill="#356954">L3 (256) Sinkhorn</text>
+
+    <text x="82" y="103" text-anchor="middle" font-size="8.6" font-family="Georgia, serif" font-style="italic" fill="#9C5D16">Orthogonal Procrustes  R · r₃</text>
+    <rect x="24" y="110" width="54" height="16" rx="2.5" fill="#FCEAD2" stroke="#D1822B" stroke-width="1"/>
+    <rect x="86" y="110" width="54" height="16" rx="2.5" fill="#FCEAD2" stroke="#D1822B" stroke-width="1"/>
+    <text x="51" y="121" text-anchor="middle" font-size="7.8" font-weight="700" fill="#9C5D16">OPQ₁</text>
+    <text x="113" y="121" text-anchor="middle" font-size="7.8" font-weight="700" fill="#9C5D16">OPQ₂</text>
+    <text x="158" y="121.5" font-size="8.4" fill="#9C5D16">L4–L5 + Dedup</text>
+
+    <text x="128" y="142" text-anchor="middle" font-size="8.1" fill="#718096">Zero-query item-only inference at cold start</text>
+  </g>
+
+  <line x1="448" y1="300" x2="448" y2="322" stroke="#3B6998" stroke-width="1.3" marker-end="url(#arr-steel)"/>
+
+  <!-- 5 Colored Discrete SID Token Tiles -->
+  <g transform="translate(318, 327)">
+    <rect x="0" y="0" width="48" height="28" rx="4" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.2"/>
+    <text x="24" y="18" text-anchor="middle" font-size="9.3" font-family="Consolas, monospace" font-weight="700" fill="#2B547E">&lt;a₁₂&gt;</text>
+
+    <rect x="53" y="0" width="48" height="28" rx="4" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.2"/>
+    <text x="77" y="18" text-anchor="middle" font-size="9.3" font-family="Consolas, monospace" font-weight="700" fill="#2B547E">&lt;b₀₄&gt;</text>
+
+    <rect x="106" y="0" width="48" height="28" rx="4" fill="#E2F0E9" stroke="#4A8B71" stroke-width="1.2"/>
+    <text x="130" y="18" text-anchor="middle" font-size="9.3" font-family="Consolas, monospace" font-weight="700" fill="#356954">&lt;c₈₉&gt;</text>
+
+    <rect x="159" y="0" width="48" height="28" rx="4" fill="#FCEAD2" stroke="#D1822B" stroke-width="1.2"/>
+    <text x="183" y="18" text-anchor="middle" font-size="9.3" font-family="Consolas, monospace" font-weight="700" fill="#9C5D16">&lt;d₀₃&gt;</text>
+
+    <rect x="212" y="0" width="48" height="28" rx="4" fill="#FCEAD2" stroke="#D1822B" stroke-width="1.2"/>
+    <text x="236" y="18" text-anchor="middle" font-size="9.3" font-family="Consolas, monospace" font-weight="700" fill="#9C5D16">&lt;e₁₇&gt;</text>
+
+    <text x="130" y="45" text-anchor="middle" font-size="8.6" fill="#4A5568">5-Token Collision-Free SID (L5 ICR = 100%)</text>
+  </g>
+
+  <text x="448" y="416" text-anchor="middle" font-size="10.8" font-weight="700" fill="#222A35">(b) KHQE-RQ-OPQ Search Tokenizer</text>
+
+  <line x1="594" y1="203" x2="610" y2="203" stroke="#4A5568" stroke-width="1.4" marker-end="url(#arr-ink)"/>
+
+  <!-- ====================================================================== -->
+  <!-- PANEL (c): Progressive Grounding & Latent Self-Distillation (SDFT)     -->
+  <!-- ====================================================================== -->
+  <rect x="614" y="14" width="300" height="378" rx="6" fill="#FAFBFD" stroke="#C8D0DA" stroke-width="1.1" stroke-dasharray="5,3"/>
+
+  <g transform="translate(628, 28)">
+    <text x="0" y="12" font-size="9" font-weight="700" fill="#4A5568">Student Input Prompt (Without &lt;SID<tspan dy="2" font-size="6.8">q</tspan><tspan dy="-2">&gt;):</tspan></text>
+    <rect x="0" y="19" width="70" height="24" rx="4" fill="#E2F0E9" stroke="#4A8B71" stroke-width="1.1"/>
+    <text x="35" y="34.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="#356954">Mu-Seq <tspan font-family="Georgia, serif" font-style="italic">u</tspan></text>
+
+    <rect x="75" y="19" width="76" height="24" rx="4" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.1"/>
+    <text x="113" y="34.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="#2B547E">Hist SIDs</text>
+
+    <rect x="156" y="19" width="54" height="24" rx="4" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.1"/>
+    <text x="183" y="34.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="#222A35">Text <tspan font-family="Georgia, serif" font-style="italic">q</tspan></text>
+
+    <rect x="215" y="19" width="57" height="24" rx="4" fill="#FDF2F2" stroke="#C44E52" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="243.5" y="34.5" text-anchor="middle" font-size="8.2" fill="#9E3B3E">&lt;SID<tspan dy="2" font-size="6.5">q</tspan><tspan dy="-2">&gt;</tspan></text>
+    <line x1="219" y1="39" x2="268" y2="23" stroke="#C44E52" stroke-width="1.6"/>
+  </g>
+
+  <!-- Teacher Branch (y=86..190 -> clean 52px distillation channel down to y=242) -->
+  <g transform="translate(628, 86)">
+    <rect x="0" y="0" width="272" height="104" rx="5" fill="#FFFDF9" stroke="#D9A05B" stroke-width="1.1" stroke-dasharray="4,3"/>
+    <text x="10" y="17" font-size="9.3" font-weight="700" fill="#9C5D16">Privileged Intent Teacher (Train-Only, Stop-Grad)</text>
+
+    <rect x="10" y="28" width="78" height="44" rx="4" fill="#FCEAD2" stroke="#D1822B" stroke-width="1"/>
+    <text x="49" y="46" text-anchor="middle" font-size="8.4" font-weight="700" fill="#9C5D16">+ Session</text>
+    <text x="49" y="59" text-anchor="middle" font-size="8" fill="#9C5D16">Keywords</text>
+
+    <line x1="88" y1="50" x2="106" y2="50" stroke="#D1822B" stroke-width="1.2" marker-end="url(#arr-ochre)"/>
+
+    <!-- Frozen Teacher Block + Snowflake Icon -->
+    <rect x="110" y="26" width="84" height="48" rx="5" fill="#F4F7FA" stroke="#6C7A89" stroke-width="1.2"/>
+    <g transform="translate(126, 50)" stroke="#3B6998" stroke-width="1.3" stroke-linecap="round">
+      <line x1="0" y1="-9" x2="0" y2="9"/>
+      <line x1="-7.8" y1="-4.5" x2="7.8" y2="4.5"/>
+      <line x1="-7.8" y1="4.5" x2="7.8" y2="-4.5"/>
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+    </g>
+    <text x="165" y="46" text-anchor="middle" font-size="8.6" font-weight="700" fill="#222A35">Teacher</text>
+    <text x="165" y="60" text-anchor="middle" font-size="8" font-family="Georgia, serif" font-style="italic" fill="#4A5568">frozen</text>
+
+    <line x1="194" y1="50" x2="212" y2="50" stroke="#D1822B" stroke-width="1.2" marker-end="url(#arr-ochre)"/>
+
+    <!-- Teacher Soft Logits Histogram -->
+    <rect x="216" y="26" width="46" height="48" rx="4" fill="#FFFFFF" stroke="#D1822B" stroke-width="1"/>
+    <rect x="223" y="52" width="6" height="16" fill="#F0C288"/>
+    <rect x="232" y="36" width="6" height="32" fill="#D1822B"/>
+    <rect x="241" y="45" width="6" height="23" fill="#F0C288"/>
+    <rect x="250" y="58" width="6" height="10" fill="#F0C288"/>
+    <text x="239" y="90" text-anchor="middle" font-size="9.5" font-family="Georgia, serif" font-style="italic" fill="#9C5D16">π<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.8">T</tspan></text>
+  </g>
+
+  <!-- Clean KL Distillation Channel (y=190..242, badge strictly inside channel, never touching borders) -->
+  <line x1="867" y1="190" x2="867" y2="240" stroke="#D1822B" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr-ochre)"/>
+  <rect x="758" y="204" width="96" height="22" rx="4" fill="#FFFDF9" stroke="#E6C394"/>
+  <text x="806" y="218.5" text-anchor="middle" font-size="9" font-family="Georgia, serif" font-style="italic" fill="#9C5D16">D<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.6">KL</tspan><tspan dy="-2.5">(π</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.6">T</tspan><tspan dy="-2.5"> ‖ π</tspan><tspan dy="2.5" font-size="7">θ</tspan><tspan dy="-2.5">)</tspan></text>
+
+  <!-- Student Branch -->
+  <g transform="translate(628, 242)">
+    <rect x="0" y="0" width="272" height="134" rx="5" fill="#F4F8FB" stroke="#9BB8D3" stroke-width="1.2"/>
+    <text x="10" y="18" font-size="9.3" font-weight="700" fill="#2B547E">Student Policy Qwen3 (0.6B – 8B) · Zero CoT Overhead</text>
+
+    <!-- Prefix KV-Cache Memory Grid Icon -->
+    <rect x="10" y="30" width="66" height="52" rx="4" fill="#FFFFFF" stroke="#8FA3B8" stroke-width="1.1"/>
+    <rect x="16" y="36" width="16" height="8" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.7"/>
+    <rect x="35" y="36" width="16" height="8" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.7"/>
+    <rect x="16" y="47" width="16" height="8" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.7"/>
+    <rect x="35" y="47" width="16" height="8" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.7"/>
+    <text x="43" y="71" text-anchor="middle" font-size="8" font-weight="700" fill="#3B6998">Prefix KV</text>
+
+    <line x1="76" y1="56" x2="96" y2="56" stroke="#3B6998" stroke-width="1.2" marker-end="url(#arr-steel)"/>
+
+    <!-- Dual-Pass R-Drop Student Block + Flame Icon -->
+    <rect x="104" y="34" width="88" height="50" rx="5" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.1"/>
+    <rect x="99" y="29" width="88" height="50" rx="5" fill="#FFFFFF" stroke="#3B6998" stroke-width="1.3"/>
+    <path d="M 116 64 C 111 58, 113 49, 118 44 C 118 49, 122 48, 121 42 C 127 47, 128 57, 122 64 Z" fill="#E18E2B" stroke="#B86B14" stroke-width="0.8"/>
+    <text x="154" y="51" text-anchor="middle" font-size="8.8" font-weight="700" fill="#222A35">Qwen3</text>
+    <text x="154" y="64" text-anchor="middle" font-size="7.8" fill="#3B6998">2× R-Drop</text>
+
+    <line x1="192" y1="56" x2="212" y2="56" stroke="#3B6998" stroke-width="1.2" marker-end="url(#arr-steel)"/>
+
+    <!-- Student Logits Histogram -->
+    <rect x="216" y="30" width="46" height="48" rx="4" fill="#FFFFFF" stroke="#3B6998" stroke-width="1.1"/>
+    <rect x="223" y="55" width="6" height="15" fill="#8EB2D5"/>
+    <rect x="232" y="39" width="6" height="31" fill="#3B6998"/>
+    <rect x="241" y="48" width="6" height="22" fill="#8EB2D5"/>
+    <rect x="250" y="61" width="6" height="9" fill="#8EB2D5"/>
+    <text x="239" y="92" text-anchor="middle" font-size="9.5" font-family="Georgia, serif" font-style="italic" fill="#2B547E">π<tspan dy="2.5" font-size="7">θ</tspan></text>
+
+    <text x="136" y="119" text-anchor="middle" font-size="9.2" font-family="Georgia, serif" font-style="italic" fill="#222A35">L<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">SDFT</tspan><tspan dy="-2.5"> = L</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">Focal</tspan><tspan dy="-2.5"> + λ</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">1</tspan><tspan dy="-2.5"> D</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">KL</tspan><tspan dy="-2.5"> + λ</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">2</tspan><tspan dy="-2.5"> L</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.5">RD</tspan></text>
+  </g>
+
+  <text x="764" y="416" text-anchor="middle" font-size="10.8" font-weight="700" fill="#222A35">(c) Latent Intent SDFT (Stage 3)</text>
+
+  <line x1="914" y1="203" x2="930" y2="203" stroke="#4A5568" stroke-width="1.4" marker-end="url(#arr-ink)"/>
+
+  <!-- ====================================================================== -->
+  <!-- PANEL (d): SP-TPMA-GRPO Tree Credit Assignment & GPU CSR Prefix-Trie   -->
+  <!-- ====================================================================== -->
+  <rect x="934" y="14" width="292" height="378" rx="6" fill="#FAFBFD" stroke="#C8D0DA" stroke-width="1.1" stroke-dasharray="5,3"/>
+
+  <g transform="translate(946, 28)">
+    <rect x="0" y="0" width="268" height="226" rx="5" fill="#FFFFFF" stroke="#CFD8E3"/>
+    <text x="12" y="18" font-size="9.3" font-weight="700" fill="#222A35">GPU CSR Prefix-Trie Rollout &amp; Subtree Backup</text>
+
+    <!-- Root Node -->
+    <circle cx="134" cy="40" r="8" fill="#3B6998"/>
+    <text x="134" y="43" text-anchor="middle" font-size="7.5" font-weight="700" fill="#FFFFFF">R</text>
+
+    <line x1="128" y1="46" x2="62" y2="86" stroke="#4A8B71" stroke-width="2"/>
+    <line x1="134" y1="48" x2="140" y2="86" stroke="#3B6998" stroke-width="1.5"/>
+    <line x1="140" y1="46" x2="214" y2="86" stroke="#C44E52" stroke-width="1.3" stroke-dasharray="4,3"/>
+
+    <circle cx="62" cy="92" r="10" fill="#E2F0E9" stroke="#4A8B71" stroke-width="1.6"/>
+    <text x="62" y="95" text-anchor="middle" font-size="8" font-family="Consolas, monospace" font-weight="700" fill="#356954">a₁₂</text>
+
+    <circle cx="140" cy="92" r="10" fill="#DCE7F2" stroke="#3B6998" stroke-width="1.3"/>
+    <text x="140" y="95" text-anchor="middle" font-size="8" font-family="Consolas, monospace" fill="#2B547E">a₀₇</text>
+
+    <circle cx="214" cy="92" r="10" fill="#FDF2F2" stroke="#C44E52" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <path d="M 209 87 L 219 97 M 219 87 L 209 97" stroke="#C44E52" stroke-width="1.8"/>
+    <text x="214" y="114" text-anchor="middle" font-size="7.8" font-weight="700" fill="#C44E52">CSR Mask</text>
+
+    <line x1="56" y1="101" x2="34" y2="146" stroke="#4A8B71" stroke-width="2"/>
+    <line x1="68" y1="101" x2="90" y2="146" stroke="#4A8B71" stroke-width="1.4"/>
+    <line x1="136" y1="101" x2="124" y2="146" stroke="#8FA3B8" stroke-width="1.2"/>
+    <line x1="145" y1="101" x2="164" y2="146" stroke="#8FA3B8" stroke-width="1.2"/>
+
+    <!-- Curved Upward MC Backup Arrow -->
+    <path d="M 26 142 Q 16 110, 48 92" fill="none" stroke="#4A8B71" stroke-width="1.35" stroke-dasharray="3,2" marker-end="url(#arr-sage)"/>
+    <text x="14" y="75" font-size="8.8" font-family="Georgia, serif" font-style="italic" fill="#356954">V<tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.4">MC</tspan><tspan dy="-2.5">(v)</tspan></text>
+
+    <rect x="18" y="148" width="32" height="20" rx="3.5" fill="#4A8B71"/>
+    <text x="34" y="161" text-anchor="middle" font-size="8" font-weight="700" fill="#FFFFFF">i* +</text>
+
+    <rect x="74" y="148" width="32" height="20" rx="3.5" fill="#E2F0E9" stroke="#4A8B71" stroke-width="1.1"/>
+    <text x="90" y="161" text-anchor="middle" font-size="8" fill="#356954">i₂</text>
+
+    <rect x="109" y="148" width="30" height="20" rx="3.5" fill="#F4F7FA" stroke="#8FA3B8"/>
+    <text x="124" y="161" text-anchor="middle" font-size="8" fill="#718096">i₃</text>
+
+    <rect x="149" y="148" width="30" height="20" rx="3.5" fill="#F4F7FA" stroke="#8FA3B8"/>
+    <text x="164" y="161" text-anchor="middle" font-size="8" fill="#718096">i₄</text>
+
+    <rect x="12" y="180" width="244" height="36" rx="4" fill="#F7F9FB" stroke="#DCE4EC"/>
+    <text x="134" y="195.5" text-anchor="middle" font-size="9" font-family="Georgia, serif" font-style="italic" fill="#222A35">A<tspan dy="-3.2" font-family="Arial, sans-serif" font-style="normal" font-size="6.3">SP</tspan><tspan dy="3.2">(v) = [V</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.3">MC</tspan><tspan dy="-2.5">(v) − μ</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.3">G</tspan><tspan dy="-2.5">] / max(RMS, τ</tspan><tspan dy="2.5" font-family="Arial, sans-serif" font-style="normal" font-size="6.3">min</tspan><tspan dy="-2.5">)</tspan></text>
+    <text x="134" y="210" text-anchor="middle" font-size="7.9" fill="#4A5568">2-Epoch Clipped PPO · Pure On-Policy (0% Anchor)</text>
+  </g>
+
+  <line x1="1080" y1="254" x2="1080" y2="274" stroke="#4A8B71" stroke-width="1.3" marker-end="url(#arr-sage)"/>
+
+  <!-- Dual-Judge & Click Reward Block -->
+  <g transform="translate(946, 278)">
+    <rect x="0" y="0" width="268" height="98" rx="5" fill="#F5F9F7" stroke="#9CCAB8" stroke-width="1.2"/>
+    <text x="12" y="18" font-size="9.3" font-weight="700" fill="#2F634E">Multi-Objective Reward &amp; Dual-Judge Eval</text>
+
+    <g transform="translate(14, 30)">
+      <rect x="0" y="0" width="68" height="50" rx="4" fill="#FFFFFF" stroke="#B8D4C8"/>
+      <polygon points="18,10 18,28 23,24 27,32 30,30 26,22 32,22" fill="#4A8B71"/>
+      <text x="47" y="22" text-anchor="middle" font-size="8.2" font-weight="700" fill="#222A35">Click</text>
+      <text x="34" y="42" text-anchor="middle" font-size="7.8" fill="#4A5568">Order &amp; Div</text>
+    </g>
+
+    <g transform="translate(92, 30)">
+      <rect x="0" y="0" width="162" height="50" rx="4" fill="#FFFFFF" stroke="#B8D4C8"/>
+      <line x1="21" y1="10" x2="21" y2="35" stroke="#3B6998" stroke-width="1.4"/>
+      <line x1="13" y1="35" x2="29" y2="35" stroke="#3B6998" stroke-width="1.4"/>
+      <line x1="9" y1="15" x2="33" y2="15" stroke="#3B6998" stroke-width="1.3"/>
+      <polygon points="9,15 5,24 13,24" fill="#DCE7F2" stroke="#3B6998" stroke-width="0.9"/>
+      <polygon points="33,15 29,24 37,24" fill="#E2F0E9" stroke="#4A8B71" stroke-width="0.9"/>
+      <text x="44" y="19" font-size="8.2" font-weight="700" fill="#222A35">BGE-v2-M3 RM (Train)</text>
+      <text x="44" y="32" font-size="8.2" font-weight="700" fill="#356954">+ Indep. Qwen3 Judge</text>
+      <text x="44" y="44" font-size="7.5" fill="#718096">10K User-Cluster Bootstrap</text>
+    </g>
+  </g>
+
+  <text x="1080" y="416" text-anchor="middle" font-size="10.8" font-weight="700" fill="#222A35">(d) SP-TPMA-GRPO &amp; GPU CSR Trie</text>
+</svg>

@@ -1,0 +1,27 @@
+# Search-RL Post-Training Configuration (SP-TPMA-GRPO & Ablations)
+rl:
+  algo: "sp_tpma_grpo"  # Options: listwise_dpo | vanilla_grpo | tpma_grpo | sp_tpma_grpo
+  num_generations: 12
+  rollout_mode: "hybrid"
+  rollout_temperature: 1.10
+  max_rl_sessions: 8000
+  epochs: 1
+  ppo_epochs: 2
+  use_ppo_clip: true
+  w_item: 0.50
+  inject_gt_anchor: false
+  batch_size_per_gpu: 8
+  lr: 5.0e-6
+  kl_beta: 0.03
+  sft_anchor_weight: 0.00
+  sp_tpma_calibration:
+    prefix_scale: 2.0
+    item_scale: 1.5
+    rms_floor: 1.0
+  reward_weights:
+    w_conv: 1.0
+    w_rel: 0.8
+    w_ctr: 0.4
+    w_div: 0.3
+  eval_beams: 20
+  seed: 42
